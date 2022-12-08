@@ -1,15 +1,20 @@
 import { HttpClient } from "../../http/http-client.js";
-import { MapResponse } from "./defintions/MapResponse";
+import { MapResponse } from "./definitions/MapResponse";
 
-export async function getMaps() {
+export async function getMaps(uuid?: string): Promise<MapResponse> {
     const client = new HttpClient();
-    const url = 'https://valorant-api.com/v1/maps'
+    const url = uuid ? `https://valorant-api.com/v1/maps/${uuid}` : 'https://valorant-api.com/v1/maps';
     let {status, data} = await client.get(url);
 
-    let retVal: MapResponse = {
-        status: status,
-        data: data
-    };
-
-    return retVal
+    if(Array.isArray(data)) {
+        return {
+            status: status,
+            data: data
+        };
+    } else {
+        return {
+            status: status,
+            data: [data]
+        }
+    }
 }
