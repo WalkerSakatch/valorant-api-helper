@@ -4,7 +4,6 @@ import express from "express";
 //https://valorant.dyn.riotcdn.net/x/content-catalog/PublicContentCatalog-release-XX.XX.zip
 import { getMaps } from "./api/maps/getMaps.js";
 import { getVersion } from "./api/version/getVersion.js";
-import { Weapon } from "./api/weapons/definitions/Weapon.js";
 import { getWeapons } from "./api/weapons/getWeapons.js";
 
 let app = express();
