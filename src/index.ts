@@ -19,7 +19,7 @@ let weaponData = await getWeapons('63e6c2b6-4a8e-869c-3d4c-e38355226584');
 // console.log(weaponData.data[0].skins);
 
 
-app.listen(12347, () => {
+app.listen(8080, () => {
     console.log("Port 12347")
 });
 
