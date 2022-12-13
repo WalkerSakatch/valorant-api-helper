@@ -1,5 +1,6 @@
 import express from "express";
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 //DataDragon Equiv:
 //https://valorant.dyn.riotcdn.net/x/content-catalog/PublicContentCatalog-release-XX.XX.zip
 import { getMaps } from "./api/maps/getMaps.js";
