@@ -20,7 +20,7 @@ let weaponData = await getWeapons('63e6c2b6-4a8e-869c-3d4c-e38355226584');
 
 
 app.listen(8080, () => {
-    console.log("Port 12347")
+    console.log(`Listening on port ${process.env.BEES}`)
 });
 
 app.get('/version', async (req, res) => {
