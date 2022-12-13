@@ -20,8 +20,8 @@ let weaponData = await getWeapons('63e6c2b6-4a8e-869c-3d4c-e38355226584');
 // console.log(weaponData.data[0].skins);
 
 
-app.listen(8080, () => {
-    console.log(`Listening on port ${process.env.BEES}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Listening on port ${process.env.PORT}`)
 });
 
 app.get('/version', async (req, res) => {
