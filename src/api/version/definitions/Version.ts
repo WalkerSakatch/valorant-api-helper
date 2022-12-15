@@ -1,4 +1,4 @@
-export interface VersionData {
+export interface Version {
     manifestId: string
     branch: string
     version: string

@@ -1,5 +1,5 @@
 import { HttpClient } from "../../http/http-client.js";
-import { VersionResponse } from "./defintitions/VersionResponse";
+import { VersionResponse } from "./definitions/VersionResponse";
 
 export async function getVersion(): Promise<VersionResponse> {
 
