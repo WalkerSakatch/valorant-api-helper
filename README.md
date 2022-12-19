@@ -1,5 +1,11 @@
 # Valorant API Helper
 
-[![Version](https://img.shields.io/badge/version-alpha-yellow)](https://github.com/WalkerSakatch/valorant-api-helper)
+not published to npm yet
+Currently test project is in p:/test123
 
-Helper written in typescript for nodeJS to interact with the fan valorant data api [here](https://dash.valorant-api.com/endpoints/agents)
+
+Steps to test:
+1. in HERE build and start to make sure it compiles properly
+2. run `npm link`
+3. in p/test123 run `npm link valorant-api-helper` (this is the "name" in package.json)
+4. If changes are made run `npm uninstall valorant-api-helper -global` and repeat steps 1-3

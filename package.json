@@ -2,7 +2,7 @@
   "name": "valorant-api-helper",
   "version": "1.0.0",
   "description": "Valorant API Helper",
-  "main": "index.js",
+  "main": "build/index.js",
   "type": "module",
   "scripts": {
     "start": "node build/index.js",
