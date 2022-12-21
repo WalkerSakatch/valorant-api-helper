@@ -1,6 +1,6 @@
 {
-  "name": "valorant-api-helper",
-  "version": "1.0.0",
+  "name": "@mrbabalafe/valorant-api-helper",
+  "version": "0.0.1",
   "description": "Valorant API Helper",
   "main": "build/index.js",
   "type": "module",
@@ -9,12 +9,15 @@
     "build": "rm -rf build && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WalkerSakatch/valorant-api-helper.git"
+  },
+  "homepage": "https://github.com/WalkerSakatch/valorant-api-helper",
   "author": "B",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@types/cors": "^2.8.13",
     "axios": "^1.2.1",
-    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
   },
