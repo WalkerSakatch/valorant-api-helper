@@ -4,4 +4,4 @@ import { Map } from "./definitions/Map";
 import { MapResponse } from "./definitions/MapResponse";
 import { getMaps } from "./getMaps.js";
 
-export {Callout, Location, Map, MapResponse, getMaps};
+export { Callout, Location, Map, MapResponse, getMaps };

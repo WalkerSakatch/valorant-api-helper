@@ -12,4 +12,4 @@ import { WeaponResponse } from "./definitions/WeaponResponse";
 import { WeaponStats } from "./definitions/WeaponStats";
 import { getWeapons } from "./getWeapons.js";
 
-export {AdsStats, AirBurstStats, AltShotgunStats, Chroma, DamageRange, GridPosition, Level, ShopData, Skin, Weapon, WeaponResponse, WeaponStats, getWeapons};
+export { AdsStats, AirBurstStats, AltShotgunStats, Chroma, DamageRange, GridPosition, Level, ShopData, Skin, Weapon, WeaponResponse, WeaponStats, getWeapons };
