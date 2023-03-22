@@ -24,6 +24,7 @@ export class RiotAuthHttpClient {
             'nonce':  '1',
             'redirect_uri': 'https://playvalorant.com/opt_in',
             'response_type': 'token id_token',
+            'scope': 'account openid'
         };
 
         let userAgent = `RiotClient/${riotClientBuild} rso-auth (Windows; 10;;Professional, x64)`;
