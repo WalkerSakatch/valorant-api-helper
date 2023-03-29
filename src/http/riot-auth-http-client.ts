@@ -27,6 +27,15 @@ export class RiotAuthHttpClient {
             'scope': 'account openid'
         };
 
+        // let body = {
+            
+        //     "client_id": "riot-client",
+        //     "nonce": "1",
+        //     "redirect_uri": "http://localhost/redirect",
+        //     "response_type": "token id_token",
+        //     "scope": "account openid lol id offline"
+              
+        // }
         let userAgent = `RiotClient/${riotClientBuild} rso-auth (Windows; 10;;Professional, x64)`;
         let headers = {
             'Content-Type': 'application/json',
