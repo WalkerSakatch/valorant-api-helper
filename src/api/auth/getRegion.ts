@@ -1,12 +1,12 @@
 import { RiotAuthHttpClient } from "../../http/riot-auth-http-client.js";
 import { AuthorizationResponse } from "./definitions/AuthorizationResponse.js";
+import { RegionResponse } from "./definitions/RegionResponse.js";
 
-export async function getEntitlementsToken(accessToken: string): Promise<AuthorizationResponse> {
+export async function getRegion(accessToken: string, idToken: string) {
     const client = new RiotAuthHttpClient();
-    const {status, headers, data} = await client.postEntitlementsToken(accessToken);
+    const {status, data} = await client.putAccountRegion(accessToken, idToken);
     return {
         status: status,
-        data: data,
-        cookies: headers['set-cookie']!
+        data: data
     }
 }

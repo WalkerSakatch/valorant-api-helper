@@ -5,5 +5,6 @@ import { makeMultiFactorRequest } from "./makeMultiFactorRequest.js";
 import { getTokenResponseFromUri } from "./getTokenResponseFromUri.js";
 import { Login } from "./Login.js";
 import { Login2FA } from "./Login2FA.js";
+import { getRegion } from "./getRegion.js";
 
-export { getAuthCookies, makeAuthRequest, getEntitlementsToken, makeMultiFactorRequest, getTokenResponseFromUri, Login, Login2FA };
+export { getAuthCookies, makeAuthRequest, getEntitlementsToken, makeMultiFactorRequest, getTokenResponseFromUri, Login, Login2FA, getRegion };

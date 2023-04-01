@@ -1,3 +1,4 @@
+import { RegionResponse } from "./RegionResponse";
 import { RiotAuthorization } from "./RiotAutorization";
 
 export interface AuthorizationResponse {

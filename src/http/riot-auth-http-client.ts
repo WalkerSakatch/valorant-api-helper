@@ -18,8 +18,8 @@ export class RiotAuthHttpClient {
         });
 
     async postAuthCookies(riotClientBuild: string) {
-        let url = 'https://auth.riotgames.com/api/v1/authorization';
-        let body = {
+        const url = 'https://auth.riotgames.com/api/v1/authorization';
+        const body = {
             'client_id': 'play-valorant-web-prod',
             'nonce':  '1',
             'redirect_uri': 'https://playvalorant.com/opt_in',
@@ -55,8 +55,8 @@ export class RiotAuthHttpClient {
     }
 
     async putAuthRequest(username: string, password: string, riotClientBuild: string, cookie: string[]) {
-        let url = 'https://auth.riotgames.com/api/v1/authorization';
-        let body = {
+        const url = 'https://auth.riotgames.com/api/v1/authorization';
+        const body = {
             'type': 'auth',
             'username':  username,
             'password': password,
@@ -64,14 +64,14 @@ export class RiotAuthHttpClient {
             'language': 'en_US'
         };
 
-        let userAgent = `RiotClient/${riotClientBuild} rso-auth (Windows; 10;;Professional, x64)`;
-        let headers = {
+        const userAgent = `RiotClient/${riotClientBuild} rso-auth (Windows; 10;;Professional, x64)`;
+        const headers = {
             'Content-Type': 'application/json',
             'User-Agent': userAgent,
             'Cookie': cookie
         };
 
-        let config: AxiosRequestConfig = {
+        const config: AxiosRequestConfig = {
             headers: headers,
             httpsAgent: this.agent
         };
@@ -85,19 +85,19 @@ export class RiotAuthHttpClient {
     }
 
     async putMultiFactorAuth(code: string, riotClientBuild: string, cookie: string[]) {
-        let url = 'https://auth.riotgames.com/api/v1/authorization';
-        let body = {
+        const url = 'https://auth.riotgames.com/api/v1/authorization';
+        const body = {
             'type': 'multifactor',
             'code': code,
             'rememberDevice': true,
         };
-        let userAgent = `RiotClient/${riotClientBuild} rso-auth (Windows; 10;;Professional, x64)`;
-        let headers = {
+        const userAgent = `RiotClient/${riotClientBuild} rso-auth (Windows; 10;;Professional, x64)`;
+        const headers = {
             'Content-Type': 'application/json',
             'User-Agent': userAgent,
             'Cookie': cookie
         };
-        let config: AxiosRequestConfig = {
+        const config: AxiosRequestConfig = {
             headers: headers,
             httpsAgent: this.agent
         };
@@ -110,15 +110,35 @@ export class RiotAuthHttpClient {
     }
 
     async postEntitlementsToken(accessToken: string) {
-        let url = 'https://entitlements.auth.riotgames.com/api/token/v1';
-        let headers = {
+        const url = 'https://entitlements.auth.riotgames.com/api/token/v1';
+        const headers = {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${accessToken}`
         };
-        let config: AxiosRequestConfig = {
+        const config: AxiosRequestConfig = {
             headers: headers
         };
         const response = axios.post(url, {}, config)
+            .then(res => {
+                return res;
+            });
+            
+        return response;
+    }
+
+    async putAccountRegion(accessToken: string, idToken: string) {
+        const url = 'https://riot-geo.pas.si.riotgames.com/pas/v1/product/valorant';
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${accessToken}`
+        };
+        const body = {
+            'id_token': idToken,
+        };
+        const config: AxiosRequestConfig = {
+            headers: headers
+        };
+        const response = axios.put(url, body, config)
             .then(res => {
                 return res;
             });
