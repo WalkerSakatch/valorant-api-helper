@@ -1,5 +1,5 @@
 {
-  "name": "valorant-api-helper",
+  "name": "@mrbabalafe/valorant-api-helper",
   "version": "0.2.4",
   "description": "Valorant API Helper",
   "main": "build/index.js",
