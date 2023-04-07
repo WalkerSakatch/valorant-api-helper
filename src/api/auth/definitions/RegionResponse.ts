@@ -1,6 +1,6 @@
-import { Affinities } from "./Affinities"
+import { RiotRegion } from "./RiotRegion"
 
 export interface RegionResponse {
-    token: string
-    affinities: Affinities
+    status: number
+    data: RiotRegion
 }
