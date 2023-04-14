@@ -7,5 +7,6 @@ import { Login } from "./Login.js";
 import { Login2FA } from "./Login2FA.js";
 import { getRegion } from "./getRegion.js";
 import { RegionToShard } from "./RegionToShard.js";
+import { getPlayerInfo } from "./getPlayerInfo.js";
 
-export { getAuthCookies, makeAuthRequest, getEntitlementsToken, makeMultiFactorRequest, getTokenResponseFromUri, Login, Login2FA, getRegion, RegionToShard };
+export { getAuthCookies, makeAuthRequest, getEntitlementsToken, makeMultiFactorRequest, getTokenResponseFromUri, Login, Login2FA, getRegion, RegionToShard, getPlayerInfo };

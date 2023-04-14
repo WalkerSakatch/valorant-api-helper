@@ -146,4 +146,12 @@ export class RiotAuthHttpClient {
         return response;
     }
 
+    // async getPlayerInfo(accessToken: string) {
+
+    // }
+
+    // async getPlayerLoadout(accessToken: string, entitlementToken: string, shard: string, puuid: string) {
+
+    // }
+
 }
