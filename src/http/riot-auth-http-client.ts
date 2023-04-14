@@ -14,7 +14,7 @@ export class RiotAuthHttpClient {
         {
             ciphers: this.ciphers.join(':'), 
             honorCipherOrder: true, 
-            minVersion: 'TLSv1.2'
+            minVersion: 'TLSv1.3'
         });
 
     async postAuthCookies(riotClientBuild: string) {
