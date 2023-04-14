@@ -8,6 +8,11 @@ getAgents()
 
 Also provides functions to Log into a riot account:
 
-Login()
-Login2FA()
+login()
+login2FA()
 getEntitlementsToken();
+
+Also provides functions about currently logged in player:
+getRegion()
+getPlayerInfo()
+getPlayerLoadout()
