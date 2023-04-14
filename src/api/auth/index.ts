@@ -3,10 +3,10 @@ import { makeAuthRequest } from "./makeAuthRequest.js";
 import { getEntitlementsToken } from "./getEntitlementsToken.js";
 import { makeMultiFactorRequest } from "./makeMultiFactorRequest.js";
 import { getTokenResponseFromUri } from "./getTokenResponseFromUri.js";
-import { Login } from "./Login.js";
-import { Login2FA } from "./Login2FA.js";
+import { login } from "./login.js";
+import { login2FA } from "./login2FA.js";
 import { getRegion } from "./getRegion.js";
-import { RegionToShard } from "./RegionToShard.js";
+import { regionToShard } from "./regionToShard.js";
 import { getPlayerInfo } from "./getPlayerInfo.js";
 
-export { getAuthCookies, makeAuthRequest, getEntitlementsToken, makeMultiFactorRequest, getTokenResponseFromUri, Login, Login2FA, getRegion, RegionToShard, getPlayerInfo };
+export { getAuthCookies, makeAuthRequest, getEntitlementsToken, makeMultiFactorRequest, getTokenResponseFromUri, login, login2FA, getRegion, regionToShard, getPlayerInfo };
