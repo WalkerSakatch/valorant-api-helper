@@ -3,7 +3,7 @@ import { AgentResponse } from "./definitions/AgentResponse.js";
 
 export async function getAgents(uuid?: string): Promise<AgentResponse> {
     const client = new HttpClient();
-    const url = uuid ? `https://valorant-api.com/v1/agents/${uuid}` : 'https://valorant-api.com/v1/agents';
+    const url = uuid ? `https://valorant-api.com/v1/agents/${uuid}` : 'https://valorant-api.com/v1/agents?isPlayableCharacter=true';
     let {status, data} = await client.get(url);
 
     if(Array.isArray(data)) {
