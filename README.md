@@ -1,13 +1,14 @@
 # Valorant API Helper
 
-Provides types for maps, agents and weapons along with 3 functions to get all data:
+Provides types for maps, agents, weapons and sprays along with 4 functions to get all data:
 
 getWeapons()
-getMap()
+getMaps()
 getAgents()
+getSprays()
 
 Also provides functions to Log into a riot account:
-
+*Riot has made changes to the auth flow, currently these functions may not work*
 login()
 login2FA()
 getEntitlementsToken();
